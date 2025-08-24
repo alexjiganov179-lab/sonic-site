@@ -30,7 +30,10 @@ fi
 # on the site. This replacement runs on all HTML files in the `public` directory.
 find public -type f -name '*.html' -print0 | while IFS= read -r -d '' html_file; do
   # Use sed to substitute the remote image URL with the local path. If the URL changes
-  # in the future, this script may need to be updated accordingly.
+  ## in the future, this script may need to be updated accordingly.
+      #sed -i "s#https://framerusercontent.com/images/ktCzdY7HyTrnsxGzD8mr1yDL68\.png[^\"']*#img/focusline1.png#g" "$html_file"
+          # Replace any occurrence of the hero image filename with our custom path
+    sed -i "s#ktCzdY7HyTrnsxGzD8mr1yDL68\.png[^\"']*#img/focusline1.png#g" "$html_file"
   sed -i 's#https://framerusercontent.com/images/ktCzdY7HyTrnsxGzD8mr1yDL68.png#img/focusline1.png#g' "$html_file"
 done
 
