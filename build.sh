@@ -29,12 +29,13 @@ fi
 # We swap that URL with our local `img/focusline1.png` path so the new image appears
 # on the site. This replacement runs on all HTML files in the `public` directory.
 find public -type f -name '*.html' -print0 | while IFS= read -r -d '' html_file; do
-  # Use sed to substitute the remote image URL with the local path. If the URL changes
-  ## in the future, this script may need to be updated accordingly.
-      #sed -i "s#https://framerusercontent.com/images/ktCzdY7HyTrnsxGzD8mr1yDL68\.png[^\"']*#img/focusline1.png#g" "$html_file"
-          # Replace any occurrence of the hero image filename with our custom path
-    sed -i "s#ktCzdY7HyTrnsxGzD8mr1yDL68\.png[^\"']*#img/focusline1.png#g" "$html_file"
-  sed -i 's#https://framerusercontent.com/images/ktCzdY7HyTrnsxGzD8mr1yDL68.png#img/focusline1.png#g' "$html_file"
+  # Use sed to substitute the remote hero image URL with our local path. The original
+  # Framer template references a hosted image on framerusercontent.com (file name
+  # ktCzdY7HyTrnsxGzD8mr1yDL68.png) and may append query parameters or appear in
+  # srcset definitions. To ensure we swap every occurrence, match the full domain
+  # path up to the filename and any optional query or size suffix before the
+  # next comma or quote. Replace it with the relative path to our custom image.
+  sed -i -E "s#https://framerusercontent.com/images/[^\"',]*ktCzdY7HyTrnsxGzD8mr1yDL68\\.png[^\"',]*#img/focusline1.png#g" "$html_file"
 done
 
 # Print contents for debug
