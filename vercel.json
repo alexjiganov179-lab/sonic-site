@@ -1,6 +1,6 @@
 {
   "rewrites": [
     { "source": "/placeholder.svg", "destination": "/assets/placeholder.svg" },
-    { "source": "/api/projects/:project/badge-data", "destination": "/api-static/projects/:project/badge-data.json" }
+    { "source": "/api/projects/:project/badge-data", "destination": "/api/projects/:project/badge-data.json" }
   ]
 }
