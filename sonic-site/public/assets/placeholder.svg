@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Placeholder graphic used by the Next.js app. The original
+  project referenced a generated placeholder SVG via a rewrite in
+  `vercel.json`.  Rather than bundling a large opaque base64 blob the
+  placeholder here is implemented with a simple grey square and
+  cross.  Feel free to replace this file with any SVG artwork you
+  prefer.
+-->
+<svg
+  width="100%"
+  height="100%"
+  viewBox="0 0 100 100"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <rect width="100" height="100" fill="#dddddd" />
+  <line x1="0" y1="0" x2="100" y2="100" stroke="#aaaaaa" stroke-width="2" />
+  <line x1="100" y1="0" x2="0" y2="100" stroke="#aaaaaa" stroke-width="2" />
+</svg>
