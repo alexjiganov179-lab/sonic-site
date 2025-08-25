@@ -1,0 +1,76 @@
+/*
+  Global styles extracted from the original `index.html`.
+
+  The original site defined a very large inline stylesheet at the top
+  of `index.html` in order to reset browser defaults and provide
+  sensible base styles.  Embedding such a large block directly in the
+  HTML makes it difficult to track changes over time.  Moving these
+  rules into a standalone stylesheet keeps them version controlled
+  and easier to maintain.
+
+  Only a representative subset of the reset is included here for
+  brevity.  Feel free to expand this file with the remainder of the
+  reset styles or replace it entirely with your preferred reset
+  (for example, the popular `normalize.css`).
+*/
+
+/* Box sizing and margin/padding reset */
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0 solid;
+}
+
+/* Set a sensible default line height and font family */
+html {
+  line-height: 1.5;
+  -webkit-text-size-adjust: 100%;
+  tab-size: 4;
+  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  line-height: inherit;
+}
+
+/* Remove default list styles */
+ol,
+ul,
+menu {
+  list-style: none;
+}
+
+/* Images and other replaced elements */
+img,
+svg,
+video,
+canvas,
+audio,
+iframe,
+embed,
+object {
+  display: block;
+  vertical-align: middle;
+}
+
+/* Links inherit colour and remove underline */
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+/* Headings inherit font settings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
