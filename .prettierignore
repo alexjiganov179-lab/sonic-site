@@ -1,0 +1,10 @@
+node_modules
+_next
+api
+api-static
+assets
+images
+media
+
+index.html
+vercel.json
